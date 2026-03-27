@@ -1,0 +1,25 @@
+{
+  "name": "@arraypress/email-templates",
+  "version": "1.0.0",
+  "description": "Modern HTML email templates and components for transactional emails — order receipts, download links, license keys, and more.",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
+  },
+  "files": ["src"],
+  "scripts": {
+    "test": "node --test tests/email-templates.test.js"
+  },
+  "keywords": ["email", "templates", "html-email", "transactional", "receipt", "invoice", "components", "stripe"],
+  "author": "David Sherlock",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arraypress/email-templates.git"
+  }
+}
