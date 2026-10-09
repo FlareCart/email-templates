@@ -1,4 +1,4 @@
-# @arraypress/email-templates
+# @flarecart/email-templates
 
 Transactional emails that render in every client: describe the email as a list of blocks, get back a complete HTML document and its plain-text twin. Every value is escaped where it lands, an unsafe link is left out rather than printed, and nothing in the markup needs a CSS feature Outlook lacks. Zero dependencies.
 
@@ -21,13 +21,13 @@ Here an email is data: a branding and a list of blocks. The HTML and the text co
 ## Install
 
 ```bash
-npm install @arraypress/email-templates
+npm install @flarecart/email-templates
 ```
 
 ## Usage
 
 ```js
-import { renderEmail } from '@arraypress/email-templates';
+import { renderEmail } from '@flarecart/email-templates';
 
 const { html, text } = renderEmail({
 	branding: { name: 'Wave Shop', accent: '#635bff', footer: 'You bought from Wave Shop.' },
@@ -42,7 +42,7 @@ const { html, text } = renderEmail({
 });
 ```
 
-Send it with [`@arraypress/mailer`](https://github.com/arraypress/mailer):
+Send it with [`@flarecart/mailer`](https://github.com/FlareCart/mailer):
 
 ```js
 await mailer.send({ to: buyer, subject: 'Your downloads from Wave Shop', html, text });

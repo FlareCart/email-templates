@@ -1,8 +1,8 @@
 /**
- * @arraypress/email-templates: transactional emails that render in every
+ * @flarecart/email-templates: transactional emails that render in every
  * client, as HTML and plain text from one description.
  *
- * @module @arraypress/email-templates
+ * @module @flarecart/email-templates
  */
 
 export { BLOCKS, blockHtml, blockText } from './blocks.js';
