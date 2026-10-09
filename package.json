@@ -1,0 +1,40 @@
+{
+  "name": "@arraypress/email-templates",
+  "version": "1.0.0",
+  "description": "Transactional emails that render in every client — a table-based, inline-styled layout and small blocks (heading, paragraph, button, links, details, codes, divider), rendered as HTML and plain text from one description. Every value escaped where it lands; unsafe links left out. Zero dependencies.",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "email",
+    "email-templates",
+    "transactional-email",
+    "html-email",
+    "plain-text",
+    "receipt"
+  ],
+  "author": "David Sherlock",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arraypress/email-templates.git"
+  }
+}
