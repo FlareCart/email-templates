@@ -1,6 +1,10 @@
 # Changelog
 
-## [1.0.0] — 2026-10-09
+## [2.0.0] — 2026-10-09
+
+A new design, replacing 1.0.0's ready-made templates (never published to
+npm; still in this repository's history). Emails are now described as
+blocks and rendered to HTML and plain text together.
 
 ### Added
 
