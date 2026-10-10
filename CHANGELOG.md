@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.1.0] — 2026-10-10 (2026-10-10)
+
+- `fromTemplate(text, { values, blocks })`: emails a seller writes as plain text with `{placeholders}`: paragraphs, `# heading`, `> note`, `---`, `**bold**`, `[link](url)`, values filled (escaped where they land), and a line of only `{name}` replaced by blocks (a list of downloads, a button). Unknown placeholders are left as written.
+- `placeholdersIn`, `fillPlaceholders`.
+
 ## [2.0.0] — 2026-10-09
 
 A new design, replacing 1.0.0's ready-made templates (never published to

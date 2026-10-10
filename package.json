@@ -1,7 +1,7 @@
 {
   "name": "@flarecart/email-templates",
-  "version": "2.0.0",
-  "description": "Transactional emails that render in every client \u2014 a table-based, inline-styled layout and small blocks (heading, paragraph, button, links, details, codes, divider), rendered as HTML and plain text from one description. Every value escaped where it lands; unsafe links left out. Zero dependencies.",
+  "version": "2.1.0",
+  "description": "Transactional emails that render in every client — a table-based, inline-styled layout and small blocks (heading, paragraph, button, links, details, codes, divider), rendered as HTML and plain text from one description. Every value escaped where it lands; unsafe links left out. Zero dependencies.",
   "type": "module",
   "main": "src/index.js",
   "types": "src/index.d.ts",

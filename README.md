@@ -48,6 +48,34 @@ Send it with [`@flarecart/mailer`](https://github.com/FlareCart/mailer):
 await mailer.send({ to: buyer, subject: 'Your downloads from Wave Shop', html, text });
 ```
 
+## Templates a seller writes
+
+`fromTemplate` turns plain text into blocks, so a store can let its owner
+edit an email in a text box:
+
+```js
+import { fromTemplate, renderEmail } from '@flarecart/email-templates';
+
+const body = `# Thanks, {customer_name}
+
+Your files are below.
+
+{download_links}
+
+> Order {order_id}`;
+
+const blocks = fromTemplate(body, {
+  values: { customer_name: 'Sam', order_id: 'ord_123' },
+  blocks: { download_links: [{ type: 'links', items: [{ label: 'Pack.zip', url: 'https://…' }] }] },
+});
+const { html, text } = renderEmail({ branding, subject: 'Your downloads', blocks });
+```
+
+A blank line starts a paragraph; `# ` a heading; `> ` a note; `---` a
+divider; `**bold**` and `[a link](https://…)` work in a line. A line of only
+`{name}` becomes `blocks[name]`; other `{name}`s are filled from `values`
+(escaped like every value), and unknown ones are left as written.
+
 ## API
 
 ### `renderEmail(input)` → `{ html, text }`

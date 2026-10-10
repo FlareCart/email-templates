@@ -9,4 +9,5 @@ export { BLOCKS, blockHtml, blockText } from './blocks.js';
 export { accentForeground, assertAccent, darkPalette, lightPalette } from './colours.js';
 export { escapeHtml, safeUrl } from './escape.js';
 export { renderEmail, styleOf } from './render.js';
+export { fillPlaceholders, fromTemplate, placeholdersIn } from './template.js';
 export { DEFAULT_THEME } from './theme.js';

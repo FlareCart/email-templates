@@ -102,3 +102,16 @@ export const DEFAULT_THEME: Readonly<Theme>;
 export function escapeHtml(value: unknown): string;
 /** An http, https or mailto URL, escaped for an attribute; '' for anything else. */
 export function safeUrl(url: unknown): string;
+
+/** The placeholders a template uses, once each, in order. */
+export function placeholdersIn(template: string): string[];
+
+/** Text with its `{placeholders}` filled in; unknown ones are left as written. */
+export function fillPlaceholders(text: string, values: Record<string, string>): string;
+
+/**
+ * A seller's plain-text template as blocks: paragraphs (blank-line separated),
+ * `# heading`, `> note`, `---`, `**bold**`, `[link](url)`, `{placeholders}` from
+ * `values`, and a line of only `{name}` replaced by `blocks[name]`.
+ */
+export function fromTemplate(template: string, fill?: { values?: Record<string, string>; blocks?: Record<string, Block[]> }): Block[];
